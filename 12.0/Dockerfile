@@ -72,7 +72,7 @@ RUN set -x; \
         && apt-get update \
         && apt-get -y install -f --no-install-recommends \
         && rm -rf /var/lib/apt/lists/* odoo.deb
-        && sudo pip3 install paramiko
+RUN sudo pip3 install paramiko
 
 # Copy entrypoint script and Odoo configuration file
 COPY ./entrypoint.sh /
